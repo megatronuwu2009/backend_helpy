@@ -1,6 +1,9 @@
 services:
   - type: web
-    name: helpy
+    name: helpy-backend
     env: python
     buildCommand: ""
-    startCommand: "python server.py"
+    startCommand: python server.py
+    envVars:
+      - key: OPENROUTER_API_KEY
+        sync: false
